@@ -3,14 +3,19 @@
 let changeImageButton = document.getElementById('change_image');
 let firstImg = document.getElementById('first_image');
 
-// Create Callback function
-function changeImageOnClick() {}
-
-changeImageButton.onclick = changeImageOnClick();
+console.dir(firstImg);
 
 // Task adding images!
+// Declare counter and array of Pokemon
 let counter = 0;
 let pokemonArray = ['bulbasaur', 'charmander', 'pikachu', 'squirtle'];
+
+// Create Callback function for change button (only works on first image loaded)
+function changeImageOnClick() {
+  firstImg.src = 'images/squirtle.png';
+}
+
+changeImageButton.onclick = changeImageOnClick;
 
 //Getting elements DOM
 let addImageButton = document.getElementById('add_image');
